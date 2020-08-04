@@ -7,7 +7,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector:'app-sliders-list',
   templateUrl:'./slider-list.component.html',
-  styleUrls:['./slider-list.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 
 export class SlidersList implements OnInit,OnDestroy {

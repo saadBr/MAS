@@ -7,7 +7,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector:'app-coupes-list',
   templateUrl:'./coupe-list.component.html',
-  styleUrls:['./coupe-list.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 
 export class CoupesList implements OnInit,OnDestroy {

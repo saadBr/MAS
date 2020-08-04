@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-motDePresident-create',
   templateUrl:'./motDePresident-create.component.html',
-  styleUrls:['./motDePresident-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class MotDePresidentCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

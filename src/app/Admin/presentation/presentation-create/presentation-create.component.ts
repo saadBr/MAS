@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-presentation-create',
   templateUrl:'./presentation-create.component.html',
-  styleUrls:['./presentation-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class PresentationCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

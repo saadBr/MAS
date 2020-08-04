@@ -89,3 +89,13 @@ mat-card {
   width: 80%;
   min-height: 100%;
 }
+
+
+.content-image {
+  width: 20%;
+  margin: auto;
+}
+
+.content-image img {
+  width: 100%;
+}

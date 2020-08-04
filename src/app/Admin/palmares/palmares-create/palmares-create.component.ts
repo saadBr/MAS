@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-palmares-create',
   templateUrl:'./palmares-create.component.html',
-  styleUrls:['./palmares-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class PalmaresCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

@@ -7,7 +7,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector:'app-sponsors-list',
   templateUrl:'./sponsor-list.component.html',
-  styleUrls:['./sponsor-list.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 
 export class SponsorsList implements OnInit,OnDestroy {

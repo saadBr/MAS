@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-sponsor-create',
   templateUrl:'./sponsor-create.component.html',
-  styleUrls:['./sponsor-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class SponsorCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

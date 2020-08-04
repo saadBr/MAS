@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-slider-create',
   templateUrl:'./slider-create.component.html',
-  styleUrls:['./slider-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class SliderCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

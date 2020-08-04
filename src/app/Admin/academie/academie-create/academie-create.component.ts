@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-academie-create',
   templateUrl:'./academie-create.component.html',
-  styleUrls:['./academie-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class AcademieCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

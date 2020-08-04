@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-comite-create',
   templateUrl:'./comite-create.component.html',
-  styleUrls:['./comite-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class ComiteCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

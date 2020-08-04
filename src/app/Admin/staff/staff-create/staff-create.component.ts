@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-staff-create',
   templateUrl:'./staff-create.component.html',
-  styleUrls:['./staff-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class StaffCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

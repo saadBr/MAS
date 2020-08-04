@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-photo-create',
   templateUrl:'./photo-create.component.html',
-  styleUrls:['./photo-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class PhotoCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

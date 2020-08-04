@@ -7,7 +7,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector:'app-photos-list',
   templateUrl:'./photo-list.component.html',
-  styleUrls:['./photo-list.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 
 export class PhotosList implements OnInit,OnDestroy {

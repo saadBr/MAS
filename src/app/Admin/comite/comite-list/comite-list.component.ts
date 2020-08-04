@@ -7,7 +7,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector:'app-comites-list',
   templateUrl:'./comite-list.component.html',
-  styleUrls:['./comite-list.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 
 export class ComitesList implements OnInit,OnDestroy {

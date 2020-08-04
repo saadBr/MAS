@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-article-create',
   templateUrl:'./article-create.component.html',
-  styleUrls:['./article-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class ArticleCreateComponent implements OnInit,OnDestroy {
   entredTitle="";

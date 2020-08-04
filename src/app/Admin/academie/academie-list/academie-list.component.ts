@@ -7,7 +7,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector:'app-academies-list',
   templateUrl:'./academie-list.component.html',
-  styleUrls:['./academie-list.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 
 export class AcademiesList implements OnInit,OnDestroy {

@@ -7,7 +7,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector:'app-players-list',
   templateUrl:'./players-list.component.html',
-  styleUrls:['./players-list.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 
 export class PlayersList implements OnInit,OnDestroy {

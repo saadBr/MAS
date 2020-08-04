@@ -10,7 +10,7 @@ import { AuthentificationServices } from 'src/app/Admin/authentification/authent
 @Component({
   selector: 'app-player-create',
   templateUrl:'./player-create.component.html',
-  styleUrls:['./player-create.component.css','../../../app.component.css','../../admin.component.css']
+  styleUrls:['../../../app.component.css','../../admin.component.css']
 })
 export class PlayerCreateComponent implements OnInit,OnDestroy {
   entredTitle="";
