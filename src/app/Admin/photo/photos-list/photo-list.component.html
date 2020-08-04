@@ -1,0 +1,22 @@
+<div class="card-create">
+  <h1 class="title">Liste des photos</h1>
+
+  <mat-accordion multi="true" *ngIf= "photos.length>0 " >
+    <mat-expansion-panel class="text-center" *ngFor="let photo of photos">
+      <mat-expansion-panel-header>
+        {{photo.description}}
+      </mat-expansion-panel-header>
+      <div class="photo-image">
+        <img [src]= "photo.imagePath" [alt]= "photo.description">
+      </div>
+      <mat-action-row>
+        <a *ngIf="userIsAuthenticated && userId === photo.creator" mat-button color="primary" [routerLink]= "['/admin/photo/modifier/',photo.id]">Edit</a>
+        <button *ngIf="userIsAuthenticated && userId === photo.creator" mat-button color="warn" (click)= "onDelete(photo.id)">Delete</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-paginator [length]= "totalPhotos" [pageSize]= "photoPerPage"
+  [pageSizeOptions]= "pageSizeOptions" (page)= "onChangedPage($event)"
+  *ngIf= "photos.length>0"></mat-paginator>
+  <p class="mat-body-1 info-text" *ngIf="photos.length<=0 "> Aucune photos ajouté pour le moment </p>
+</div>

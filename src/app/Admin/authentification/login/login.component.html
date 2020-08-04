@@ -1,0 +1,31 @@
+  <div class="card align-middle">
+    <mat-card class="text-center">
+      <div class="logo">
+          <mat-icon class="icon" svgIcon='MAS' aria-hidden="false"></mat-icon>
+      </div>
+      <form (submit)= "onLogin(loginForm)" #loginForm="ngForm" >
+        <mat-form-field>
+          <input matInput
+          name= "email"
+          ngModel
+          type="email"
+          placeholder="E-Mail"
+          #emailInput= "ngModel"
+          obligatoire
+          email>
+          <mat-error *ngIf= "emailInput.invalid">Entrez un email valide.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="password"
+          matInput
+          placeholder="Mot de passe"
+          name="password"
+          ngModel
+          #passwordInput= "ngModel"
+          obligatoire>
+          <mat-error *ngIf= "passwordInput.invalid">Entrez un mot de passe valide.</mat-error>
+        </mat-form-field>
+        <button color="yellow" mat-raised-button type="submit">Se connecter</button>
+      </form>
+    </mat-card>
+  </div>

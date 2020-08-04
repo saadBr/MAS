@@ -1,0 +1,33 @@
+<div class="card-create">
+  <h1 class="title" *ngIf="mode === 'create'">Ajouter article</h1>
+  <h1 class="title" *ngIf="mode === 'edit'">Modifier article</h1>
+<mat-card>
+
+  <form [formGroup]= "form" (submit)= "onenregistrerArticle()" >
+    <mat-form-field>
+      <input matInput
+      type="text"
+      formControlName="designation"
+      placeholder="designation">
+      <mat-error *ngIf= "form.get('designation').invalid">obligatoire</mat-error>
+    </mat-form-field>
+    <div>
+      <button mat-mat-stroked-button
+      type="button"
+      (click)= "filePicker.click()">choisir image </button>
+      <input type="file" #filePicker (change)= "onImagePicked($event)">
+    </div>
+    <div class="image-preview" *ngIf= "imagePreview !== '' && imagePreview && form.get('image').valid">
+      <img [src]= "imagePreview" [alt]= "form.value.designation">
+    </div>
+    <mat-form-field>
+      <input matInput
+      type="text"
+      formControlName="prix"
+      placeholder="prix">
+      <mat-error *ngIf= "form.get('prix').invalid">obligatoire</mat-error>
+    </mat-form-field>
+    <div class="text-center"><button class="text-center yellow" mat-raised-button type="submit">Enregistrer article</button></div>
+  </form>
+</mat-card>
+</div>

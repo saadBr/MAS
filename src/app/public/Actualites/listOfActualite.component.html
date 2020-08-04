@@ -1,0 +1,35 @@
+<div *ngIf="!isLoading">
+<app-header></app-header>
+<div class="container">
+  <div class="title">
+    <h1>Actualites</h1>
+  </div>
+  <div class="row listOfAcutalite">
+    <div class="col-md-3" *ngFor="let actualite of actualites">
+      <a [routerLink]= "['/actualite/',actualite.id]">
+        <mdb-card>
+          <div class="view overlay waves-light" mdbWavesEffect>
+            <mdb-card-img class="w-100" [src]="actualite.imagePath"></mdb-card-img>
+          </div>
+          <mdb-card-body>
+            <mdb-card-title class="text-center">
+              <h4>{{actualite.titre}}</h4>
+            </mdb-card-title>
+          </mdb-card-body>
+          <mdb-card-footer class="mdb-color lighten-3 text-center">
+            <ul class="list-unstyled list-inline font-small mt-3">
+              <li class="list-inline-item pr-2 black-text">
+                <mdb-icon far icon="clock" class="pr-1"></mdb-icon>{{actualite.date.toString().substring(0,actualite.date.toString().indexOf("T"))}}</li>
+              <li class="list-inline-item pr-2">
+            </ul>
+          </mdb-card-footer>
+        </mdb-card>
+      </a>
+    </div>
+  </div>
+  <mat-paginator [length]= "totalActualites" [pageSize]= "actualitePerPage"
+  [pageSizeOptions]= "pageSizeOptions" (page)= "onChangedPage($event)"
+  *ngIf= "actualites.length>0"></mat-paginator>
+</div>
+<app-footer></app-footer>
+</div>

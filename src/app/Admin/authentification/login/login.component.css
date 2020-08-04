@@ -1,0 +1,33 @@
+mat-form-field
+{
+  width: 100%;
+}
+
+.mat-raised-button {
+  background-color: yellow !important;
+}
+
+mat-card {
+  width: 40%;
+  margin: auto;
+  border: 1 solid black;
+}
+
+
+
+
+.card {
+  height: 100vh;
+  background-image: url(../../../../assets/10.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  display: block;
+  zoom: 3;
+}
+
+

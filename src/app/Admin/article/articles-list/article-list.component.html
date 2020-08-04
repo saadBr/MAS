@@ -1,0 +1,22 @@
+<div class="card">
+  <h1 class="title">Liste des articles</h1>
+  <mat-accordion multi="true" *ngIf= "articles.length>0 " >
+    <mat-expansion-panel class="text-center" *ngFor="let article of articles">
+      <mat-expansion-panel-header>
+        {{article.designation}}
+      </mat-expansion-panel-header>
+      <div class="article-image">
+        <img [src]= "article.imagePath" [alt]= "article.designation">
+      </div>
+      {{article.prix}}
+      <mat-action-row>
+        <a *ngIf="userIsAuthenticated && userId === article.creator" mat-button color="primary" [routerLink]= "['/admin/article/modifier/',article.id]">Edit</a>
+        <button *ngIf="userIsAuthenticated && userId === article.creator" mat-button color="warn" (click)= "onDelete(article.id)">Delete</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-paginator [length]= "totalArticles" [pageSize]= "articlePerPage"
+  [pageSizeOptions]= "pageSizeOptions" (page)= "onChangedPage($event)"
+  *ngIf= "articles.length>0"></mat-paginator>
+  <p class="mat-body-1 info-text" *ngIf="articles.length<=0 "> Aucune articles ajouté pour le moment </p>
+</div>

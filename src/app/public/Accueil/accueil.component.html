@@ -1,0 +1,80 @@
+
+
+
+<mat-spinner mode="determinate" *ngIf= "isLoading">
+</mat-spinner>
+<div *ngIf="!isLoading">
+<app-header></app-header>
+<div class="container">
+  <div class="carousel-container">
+    <mdb-carousel class="carousel slide carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
+      <mdb-carousel-item *ngFor= "let slider of sliders">
+        <img class="d-block w-100" [src]= "slider.imagePath" [alt]= "slider.description">
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+  <div class="title">
+    <h1>ACTUALITE</h1>
+  </div>
+  <div class=" row card-deck text-center">
+    <mdb-card class="col-md-3" *ngFor="let actualite of actualites;let i=index">
+      <div *ngIf="i<4">
+        <div class="view overlay waves-light" mdbWavesEffect>
+          <mdb-card-img class="w-100" [src]="actualite.imagePath" [alt]="actualite.titre"></mdb-card-img>
+        </div>
+        <mdb-card-body >
+          <mdb-card-title>
+            <h4>{{actualite.titre}}</h4>
+          </mdb-card-title>
+          <a [routerLink]= "['/actualite/',actualite.id]" mdbBtn color="yellow" mdbWavesEffect>Afficher la suite</a>
+        </mdb-card-body>
+      </div>
+    </mdb-card>
+  </div>
+  <div class="title">
+    <h1>ACADEMIE</h1>
+  </div>
+  <div class=" row card-deck text-center">
+    <mdb-card class="col-md-4" *ngFor="let academie of academies;let i=index">
+      <div *ngIf="i<4">
+        <div class="view overlay waves-light" mdbWavesEffect>
+          <mdb-card-img [src]="academie.imagePath" [alt]="academie.titre"></mdb-card-img>
+        </div>
+        <mdb-card-body >
+          <mdb-card-title>
+            <h4>{{academie.titre}}</h4>
+          </mdb-card-title>
+          <a [routerLink]= "['/academie/',academie.id]" mdbBtn color="yellow" mdbWavesEffect>Afficher la suite</a>
+        </mdb-card-body>
+      </div>
+    </mdb-card>
+  </div>
+  <div class="title">
+    <h1>PALMARES</h1>
+  </div>
+  <div class="card-deck ">
+    <mdb-card *ngFor="let coupe of coupes">
+      <div class="view overlay waves-light" mdbWavesEffect>
+        <mdb-card-img [src]="coupe.imagePath" class="w-100" [alt]="coupe.titre"></mdb-card-img>
+      </div>
+      <mdb-card-body>
+        <mdb-card-title>
+          <h4 class="text-center">{{coupe.titre}}</h4>
+        </mdb-card-title>
+        <mdb-card-text > <h4>{{coupe.nombre}}</h4></mdb-card-text>
+      </mdb-card-body>
+    </mdb-card>
+  </div>
+  <div class="title">
+    <h1>SPONSORS</h1>
+  </div>
+  <div class="card-deck sponsor-card">
+    <mdb-card *ngFor="let sponsor of sponsors">
+      <div class="view overlay waves-light" mdbWavesEffect>
+        <mdb-card-img [src]="sponsor.imagePath" class="w-100" [alt]="sponsor.nom"></mdb-card-img>
+      </div>
+    </mdb-card>
+  </div>
+</div>
+<app-footer></app-footer>
+</div>

@@ -1,0 +1,18 @@
+<div *ngIf="!isLoading">
+<app-header></app-header>
+<div class="container">
+  <div class="title">
+    <h1>Mot de president</h1>
+</div>
+<div class=article>
+  <div class="content">
+    <p [innerHTML]="motDePresident.contenu"></p>
+  </div>
+  <div class="image">
+    <img [src]="motDePresident.imagePath" class="w-100">
+  </div>
+</div>
+</div>
+<app-footer></app-footer>
+</div>
+

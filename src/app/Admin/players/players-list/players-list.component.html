@@ -1,0 +1,22 @@
+<div class="card-create">
+  <h1 class="title">Liste des joueurs</h1>
+  <mat-accordion multi="true" *ngIf= "players.length>0 " >
+    <mat-expansion-panel class="text-center" *ngFor="let player of players">
+      <mat-expansion-panel-header>
+        {{player.nom}}
+      </mat-expansion-panel-header>
+      <div class="player-image">
+        <img [src]= "player.imagePath" [alt]= "player.nom">
+      </div>
+      {{player.poste}}
+      <mat-action-row>
+        <a *ngIf="userIsAuthenticated && userId === player.creator" mat-button color="primary" [routerLink]= "['/admin/effectif/modifier/',player.id]">Edit</a>
+        <button *ngIf="userIsAuthenticated && userId === player.creator" mat-button color="warn" (click)= "onDelete(player.id)">Delete</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-paginator [length]= "totalPlayers" [pageSize]= "playerPerPage"
+  [pageSizeOptions]= "pageSizeOptions" (page)= "onChangedPage($event)"
+  *ngIf= "players.length>0"></mat-paginator>
+  <p class="mat-body-1 info-text" *ngIf="players.length<=0 "> Aucune players ajouté pour le moment </p>
+</div>

@@ -1,0 +1,77 @@
+mat-card {
+  max-width: 20%;
+  margin-bottom: 2% !important;
+  border: solid yellow;
+  margin: auto;
+  background-color: black;
+}
+
+mat-card-actions {
+  text-align: center;
+  width:100%;
+  margin: auto;
+}
+mat-card-img {
+  text-shadow: 2px 2px 5px grey;
+}
+mat-card.title h1{
+max-width: 100%;
+  text-align: center;
+  color: white;
+}
+
+mat-card-header {
+  display:block;
+}
+.actualite {
+  margin:auto;
+  text-align: center;
+  display: flex;
+}
+
+.title h1{
+font-family: 'El Messiri', sans-serif !important;
+  text-align: center;
+  background: -webkit-linear-gradient(#333300 0%,#d6ba00 100%);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 33px !important;
+  color: #000 !important;
+  position: relative !important;
+  font-weight: bold !important;
+  border-bottom: solid transparent;
+  border-image: linear-gradient(#333300 50%,#d6ba00 50%);
+  border-image-slice: 1;
+  width: 80%;
+  margin: auto;
+margin-top: 4%;
+margin-bottom: 2% !important;
+padding: 1%;
+}
+
+.container {
+  margin-top: 6%;
+}
+
+.article {
+  float: left;
+  clear: none;
+  margin: 2%;
+}
+.content {
+  float: left;
+  width: 45%;
+  text-align: justify;
+  margin: 1%;
+}
+
+.image {
+  float: right;
+  width: 50%;
+  overflow: hidden;
+}
+
+h4 {
+  text-align: center !important;
+}

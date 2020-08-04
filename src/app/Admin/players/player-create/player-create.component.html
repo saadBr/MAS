@@ -1,0 +1,36 @@
+<div class="card-create">
+  <h1 class="title" *ngIf="mode === 'create'">Ajouter joueur</h1>
+  <h1 class="title" *ngIf="mode === 'edit'">Modifier joueur</h1>
+<mat-card>
+
+  <form [formGroup]= "form" (submit)= "onenregistrerPlayer()" >
+    <mat-form-field>
+      <input matInput
+      type="text"
+      formControlName="nom"
+      placeholder="nom">
+      <mat-error *ngIf= "form.get('nom').invalid">obligatoire</mat-error>
+    </mat-form-field>
+    <div>
+      <button mat-mat-stroked-button
+      type="button"
+      (click)= "filePicker.click()">choisir image </button>
+      <input type="file" #filePicker (change)= "onImagePicked($event)">
+    </div>
+    <div class="image-preview" *ngIf= "imagePreview !== '' && imagePreview && form.get('image').valid">
+      <img [src]= "imagePreview" [alt]= "form.value.nom">
+    </div>
+    <mat-form-field>
+      <mat-label>Poste</mat-label>
+        <select matNativeControl obligatoire formControlName="poste">
+          <option value="Gardien">Gardien</option>
+          <option value="Diffenseur">Diffenseur</option>
+          <option value="Milieu">Milieu</option>
+          <option value="Attaquant">Attaquant</option>
+        </select>
+      <mat-error *ngIf= "form.get('poste').invalid">obligatoire</mat-error>
+    </mat-form-field>
+    <div class="text-center"><button class="text-center yellow" mat-raised-button type="submit">enregistrer player</button></div>
+  </form>
+</mat-card>
+</div>

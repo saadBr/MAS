@@ -1,0 +1,97 @@
+
+<ul class="nav flex-column lighten-4 py-4">
+  <div class="menu-items">
+  <li>
+    <div class="logo text-center">
+      <a href="/">
+        <mat-icon class="icon" svgIcon='MAS' aria-hidden="false"></mat-icon>
+      </a>
+    </div>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="academie">Academie</button>
+    <mat-menu class="menu-toggle" #academie="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/academie/ajouter">Ajouter academie</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/academie/liste academie">liste des academie</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="actualites">Actualites</button>
+    <mat-menu class="menu-toggle" #actualites="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/actualite/ajouter">Ajouter actualite</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/actualite/liste actualite">liste des actulites</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="club">Club</button>
+    <mat-menu class="menu-toggle" #club="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/motDePresident/modifier/5ef946cdeee8b12bd003037f">Modifier mot du president</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/presentation/modifier/5ef94b6b17f793244451958b">Modifier presentation</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="comite">Comite</button>
+    <mat-menu class="menu-toggle" #comite="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/comite/ajouter">ajouter comite</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/comite/liste comite">liste des comite</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="effectif">effectif</button>
+    <mat-menu class="menu-toggle" #effectif="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/effectif/ajouter">ajouter effectif</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/effectif/liste effectifs">liste des effectifs</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="article">MAS Store</button>
+    <mat-menu class="menu-toggle" #article="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/article/ajouter">ajouter atricle</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/article/liste article">liste des articles</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="palmares">Palmares</button>
+    <mat-menu class="menu-toggle" #palmares="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/palmares/modifier/5ef933779c47e02a50f0d053">Modifier palmares</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/coupe/liste coupe">liste des coupes</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/coupe/ajouter">ajouter coupe</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="photos">Photos</button>
+    <mat-menu class="menu-toggle" #photos="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/photo/ajouter">Ajouter photo</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/photo/liste photo">liste des photos</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="slider">Slider</button>
+    <mat-menu class="menu-toggle" #slider="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/slider/ajouter">Ajouter slider</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/slider/liste slider">liste des sliders</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="sponsor">Sponsors</button>
+    <mat-menu class="menu-toggle" #sponsor="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/sponsor/ajouter">ajouter sponsor</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/sponsor/liste sponsor">liste des sponsors</button>
+    </mat-menu>
+  </li>
+  <li>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="staff">Staff technique</button>
+    <mat-menu class="menu-toggle" #staff="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/staff/ajouter">ajouter staff</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="admin/staff/liste staff">liste des staff</button>
+    </mat-menu>
+  </li>
+
+
+  <li>
+    <button class="items" *ngIf="userIsAuthenticated" mat-button (click)= "onLogout()">Se déconnecter</button>
+  </li>
+</div>
+
+</ul>
+

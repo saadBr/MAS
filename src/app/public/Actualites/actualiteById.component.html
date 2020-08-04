@@ -1,0 +1,20 @@
+<div *ngIf="!isLoading">
+<app-header></app-header>
+<div class="container">
+  <div class="title">
+    <h1>{{actualite.titre}}</h1>
+  </div>
+<div class=article>
+  <div class="content">
+    <p [innerHTML]="actualite.contenu"></p>
+  </div>
+  <div class="image">
+    <img [src]="actualite.imagePath" class="w-100">
+  </div>
+</div>
+</div>
+<app-footer></app-footer>
+</div>
+
+
+

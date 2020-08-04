@@ -1,0 +1,33 @@
+<div class="card-create">
+  <h1 class="title" *ngIf="mode === 'create'">Ajouter staff</h1>
+  <h1 class="title" *ngIf="mode === 'edit'">Modifier staff</h1>
+<mat-card>
+
+  <form [formGroup]= "form" (submit)= "onenregistrerStaff()" >
+    <mat-form-field>
+      <input matInput
+      type="text"
+      formControlName="nom"
+      placeholder="nom">
+      <mat-error *ngIf= "form.get('nom').invalid">obligatoire</mat-error>
+    </mat-form-field>
+    <div>
+      <button mat-mat-stroked-button
+      type="button"
+      (click)= "filePicker.click()">choisir image </button>
+      <input type="file" #filePicker (change)= "onImagePicked($event)">
+    </div>
+    <div class="image-preview" *ngIf= "imagePreview !== '' && imagePreview && form.get('image').valid">
+      <img [src]= "imagePreview" [alt]= "form.value.nom">
+    </div>
+    <mat-form-field>
+      <input matInput
+      type="text"
+      formControlName="role"
+      placeholder="role">
+      <mat-error *ngIf= "form.get('role').invalid">obligatoire</mat-error>
+    </mat-form-field>
+    <div class="text-center"><button class="text-center yellow" mat-raised-button type="submit">enregistrer staff</button></div>
+  </form>
+</mat-card>
+</div>

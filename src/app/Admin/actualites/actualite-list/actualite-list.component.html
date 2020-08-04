@@ -1,0 +1,23 @@
+<div class="card">
+  <h1 class="title">Liste des actualites</h1>
+
+  <mat-accordion multi="true" *ngIf= "actualites.length>0 " >
+    <mat-expansion-panel class="text-center" *ngFor="let actualite of actualites">
+      <mat-expansion-panel-header>
+        {{actualite.titre}}
+      </mat-expansion-panel-header>
+      <div class="actualite-image">
+        <img [src]= "actualite.imagePath" [alt]= "actualite.titre">
+      </div>
+      {{actualite.contenu}}
+      <mat-action-row>
+        <a *ngIf="userIsAuthenticated && userId === actualite.creator" mat-button color="primary" [routerLink]= "['/admin/actualite/modifier/',actualite.id]">Edit</a>
+        <button *ngIf="userIsAuthenticated && userId === actualite.creator" mat-button color="warn" (click)= "onDelete(actualite.id)">Delete</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-paginator [length]= "totalActualites" [pageSize]= "actualitePerPage"
+  [pageSizeOptions]= "pageSizeOptions" (page)= "onChangedPage($event)"
+  *ngIf= "actualites.length>0"></mat-paginator>
+  <p class="mat-body-1 info-text" *ngIf="actualites.length<=0 "> Aucune actualites ajouté pour le moment </p>
+</div>

@@ -1,0 +1,26 @@
+<div class="card-create">
+  <h1 class="title" *ngIf="mode === 'create'">Ajouter slider</h1>
+  <h1 class="title" *ngIf="mode === 'edit'">Modifier slider</h1>
+<mat-card>
+
+  <form [formGroup]= "form" (submit)= "onenregistrerSlider()" >
+    <mat-form-field>
+      <input matInput
+      type="text"
+      formControlName="description"
+      placeholder="description">
+      <mat-error *ngIf= "form.get('description').invalid">obligatoire</mat-error>
+    </mat-form-field>
+    <div>
+      <button mat-mat-stroked-button
+      type="button"
+      (click)= "filePicker.click()">choisir image </button>
+      <input type="file" #filePicker (change)= "onImagePicked($event)">
+    </div>
+    <div class="image-preview" *ngIf= "imagePreview !== '' && imagePreview && form.get('image').valid">
+      <img [src]= "imagePreview" [alt]= "form.value.description">
+    </div>
+    <div class="text-center"><button class="text-center yellow" mat-raised-button type="submit">Enregistrer slider</button></div>
+  </form>
+</mat-card>
+</div>

@@ -1,0 +1,72 @@
+
+.title h1{
+font-family: 'El Messiri', sans-serif !important;
+  text-align: center;
+  background: -webkit-linear-gradient(#333300 0%,#d6ba00 100%);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 33px !important;
+  color: #000 !important;
+  position: relative !important;
+  font-weight: bold !important;
+  border-bottom: solid transparent;
+  border-image: linear-gradient(#333300 50%,#d6ba00 50%);
+  border-image-slice: 1;
+  width: 80%;
+  margin: auto;
+margin-top: 4%;
+margin-bottom: 2% !important;
+padding: 1%;
+}
+
+.listOfActualite {
+  margin-top: 1% !important;
+}
+
+.container {
+  margin-top: 6%;
+}
+
+.mr-4 {
+  margin-right: 0 !important;
+  zoom: 3;
+}
+
+.mdb-color.lighten-3 {
+  background-color: yellow !important;
+}
+.btn-action {
+  border-radius: 50%;
+}
+.btn-floating i {
+  display: inline-block;
+  width: inherit;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 47px;
+}
+.card-footer {
+  padding: 0;
+}
+
+.card-body {
+  padding: 0;
+}
+
+mdb-card {
+  height: 100%;
+}
+
+a,a:hover,a:link,a::after {
+  color: #000;
+  text-decoration: none;
+}
+
+.col-md-3 {
+  margin-bottom: 2% !important;
+}
+
+h4 {
+  margin: auto !important;
+}

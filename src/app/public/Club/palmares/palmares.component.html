@@ -1,0 +1,30 @@
+<div *ngIf="!isLoading">
+<app-header></app-header>
+<div class="container">
+  <div class="title">
+    <h1>PALMARES</h1>
+</div>
+<div class=article>
+  <div class="content">
+    <p [innerHTML]="palmares.contenu"></p>
+  </div>
+  <div class="image">
+    <img [src]="palmares.imagePath" class="w-100">
+  </div>
+</div>
+<div class="card-deck ">
+  <mdb-card *ngFor="let coupe of coupes">
+    <div class="view overlay waves-light" mdbWavesEffect>
+      <mdb-card-img [src]="coupe.imagePath" class="w-100" [alt]="coupe.titre"></mdb-card-img>
+    </div>
+    <mdb-card-body>
+      <mdb-card-title>
+        <h4 class="text-center">{{coupe.titre}}</h4>
+      </mdb-card-title>
+      <mdb-card-text > <h4>{{coupe.nombre}}</h4></mdb-card-text>
+    </mdb-card-body>
+  </mdb-card>
+</div>
+</div>
+<app-footer></app-footer>
+</div>

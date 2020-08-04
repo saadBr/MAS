@@ -1,0 +1,9 @@
+
+.article-image {
+  width: 20%;
+  margin: auto;
+}
+
+.article-image img {
+  width: 100%;
+}

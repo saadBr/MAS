@@ -1,0 +1,93 @@
+<div *ngIf="!isLoading">
+  <app-header></app-header>
+  <div class="container">
+    <div class="title">
+      <h1>EFFECTIF</h1>
+    </div>
+    <div>
+      <div class="poste">
+        <h2>
+          GARDIENS
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let player of gardien">
+          <mdb-card cascade="true">
+            <div class="view view-cascade overlay waves-light" class="w-100" mdbWavesEffect>
+              <mdb-card-img [src]="player.imagePath"></mdb-card-img>
+            </div>
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+              <h4 class="card-title">
+                <strong>{{player.nom}}</strong>
+              </h4>
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="poste">
+        <h2>
+          DIFFENSEURS
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let player of diffenseur">
+          <mdb-card cascade="true">
+            <div class="view view-cascade overlay waves-light" class="w-100" mdbWavesEffect>
+              <mdb-card-img [src]="player.imagePath"></mdb-card-img>
+            </div>
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+              <h4 class="card-title">
+                <strong>{{player.nom}}</strong>
+              </h4>
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="poste">
+        <h2>
+          MILIEU
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let player of milieu">
+          <mdb-card cascade="true">
+            <div class="view view-cascade overlay waves-light" class="w-100" mdbWavesEffect>
+              <mdb-card-img [src]="player.imagePath"></mdb-card-img>
+            </div>
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+              <h4 class="card-title">
+                <strong>{{player.nom}}</strong>
+              </h4>
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="poste">
+        <h2>
+          ATTAQUANTS
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let player of attaquant">
+          <mdb-card cascade="true">
+            <div class="view view-cascade overlay waves-light" class="w-100" mdbWavesEffect>
+              <mdb-card-img [src]="player.imagePath"></mdb-card-img>
+            </div>
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+              <h4 class="card-title">
+                <strong>{{player.nom}}</strong>
+              </h4>
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

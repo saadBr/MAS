@@ -1,0 +1,33 @@
+<mat-toolbar class="menu" id="menuId" (scroll)= "onWindowScroll($event)">
+  <div class="logo">
+    <a href="/">
+      <mat-icon class="icon" svgIcon='MAS' aria-hidden="false"></mat-icon>
+    </a>
+  </div>
+  <div class="menu-items">
+    <button class="items active" routerLink="" mat-button routerLinkActive="active">ACCUEIL</button>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="club">CLUB</button>
+    <mat-menu class="menu-toggle" #club="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item  routerLink="/club/mot de president" routerLinkActive="active"> Mot de president</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="/club/comite" routerLinkActive="active">Comité</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="/club/palmares" routerLinkActive="active"> Palmarès</button>
+    </mat-menu>
+    <button class="items" mat-button routerLink="/actualites" routerLinkActive="active">ACTUALITES</button>
+    <button class="items" mat-button routerLinkActive="active" [matMenuTriggerFor]="equipePro">EQUIPE PRO</button>
+    <mat-menu class="menu-toggle" #equipePro="matMenu" xPosition="after">
+      <button class="menu-toggel-items" mat-menu-item routerLink="/equipe pro/presentation" routerLinkActive="active"> Présentation</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="/equipe pro/effectif">Effectif</button>
+      <button class="menu-toggel-items" mat-menu-item routerLink="/equipe pro/staff technique">Staff technique</button>
+    </mat-menu>
+    <button class="items" mat-button routerLink="/academie" >ACADEMIE</button>
+    <button class="items" mat-button [matMenuTriggerFor]="beforeMenu">MEDIA</button>
+    <mat-menu class="menu-toggle" #beforeMenu="matMenu" xPosition="after">
+      <button class="menu-toggel-items" routerLink="/media/photos" mat-menu-item>Photos</button>
+    </mat-menu>
+    <button class="items" mat-button routerLink="/mas store" >MAS STORE</button>
+    <button class="icon" (click)= "menuItem()">
+      <mdb-icon fas icon="align-justify"></mdb-icon>
+    </button>
+  </div>
+</mat-toolbar>
+

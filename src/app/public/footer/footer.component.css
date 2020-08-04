@@ -1,0 +1,28 @@
+.indigo {
+  background-color: black !important;
+  color: white;
+}
+
+h5 {
+  font-size: large !important;
+}
+
+.logo {
+  display: block;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  transform: scale(4);
+}
+
+.page-footer {
+  margin-top: 2%;
+  overflow: hidden;
+  bottom: 0 !important;
+  margin-bottom: 0px;
+  width: 100% ;
+}
+
+.items:hover , .items>li>a:hover {
+  color: yellow;
+  text-decoration: none;
+}

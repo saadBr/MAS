@@ -1,0 +1,108 @@
+
+
+.logo {
+  display: block;
+  zoom: 3;
+}
+li {
+    line-height: 1em;
+}
+
+.nav {
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  min-height: 100%;
+  color: white !important;
+  float: left;
+  background-color: black;
+  position: fixed;
+  overflow-y: auto;
+}
+
+
+mat-icon {
+  fill: black;
+  margin:0.25rem;
+}
+
+
+.icons {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: black;
+  overflow: hidden;
+}
+
+.navbar-inverse {
+  background-color: rgba(0, 0, 0, 50%) !important;
+}
+
+.logo {
+  display: block;
+  zoom: 3;
+
+}
+
+.menu-items {
+  margin: auto;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.items {
+  color: white !important;
+  border-color:transparent;
+  background-color: transparent;
+  margin: 0.5rem;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: large;
+}
+
+
+.menu-items> .items:hover {
+  color: yellow;
+}
+
+.menu-items> .items:focus {
+  outline: transparent;
+}
+
+.active {
+  color: yellow !important;
+}
+
+::ng-deep .menu-toggle {
+  background-color: black;
+  border-top: 1px solid yellow;
+  overflow: hidden !important;
+}
+
+.menu-toggel-items {
+  color: white !important;
+  border-color:transparent;
+  background-color: transparent;
+  margin: 0.5rem;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: large;
+}
+
+.menu-toggel-items:hover {
+  color: yellow;
+}
+
+.menu-toggel-items:focus {
+  outline: transparent;
+}
+.menu .menu-items .icon {
+  display: none;
+}
+
+.icon {
+  color: yellow;
+  background-color: transparent;
+}

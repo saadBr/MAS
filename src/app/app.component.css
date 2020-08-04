@@ -1,0 +1,17 @@
+
+
+mat-spinner
+{
+  background-image: url(../assets/loading-final.gif);
+  background-size:100% ;
+  position: fixed;
+  z-index: 999;
+  height: 200px !important;
+  width: 200px !important;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

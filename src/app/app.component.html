@@ -1,0 +1,5 @@
+
+<app-menu *ngIf="isAdmin && !login"></app-menu>
+<main>
+  <router-outlet *ngIf="!isLoading"></router-outlet>
+</main>
